@@ -322,12 +322,14 @@ span {
     height: auto;
     display: flex;
     flex-direction: column;
+
     padding: 5% 5% 2% 0;
     position: relative;
 }
 .description p, .descriptionPopulaires p{
     margin: 2% 0;
 }
+
 .notation {
     padding: 2% 5%;
     display: flex;
@@ -336,6 +338,7 @@ span.notationPopulaires {
     margin: 40% 0 0 0;
     display: flex;
     position: absolute;
+    bottom: 3%;
 }
 .fa-star {
     color:#F2F2F2;
@@ -538,18 +541,11 @@ span.notationPopulaires {
         font-size: 18px;
         flex-wrap: nowrap;
     }
-    .filtre .F {
-        margin: 12px;
+    .filtre .F .fas{
+        margin: 2% 2% 2% -15%;
     }
-    .filtre .F .filtre_nom {
-        margin: 0 12px;
-    }
-
     #containerMarseille{
         gap: 0;
-    }
-    #containerPopulaires {
-        
     }
     .titrePopulaires{
         padding: 3% 0;
@@ -570,10 +566,12 @@ span.notationPopulaires {
         height: auto;
         margin: 0 5%;
         padding: 0;
+        flex-grow: 1;
     }
-    span.notationPopulaires {
-        margin: 33% 0;
+    .descriptionPopulaires p{
+        font-size: 16px;
     }
+
 }
 
 
@@ -643,34 +641,31 @@ span.notationPopulaires {
         display: none;
     }
     #iconerechercher{
-        width: 65px;
+        width: 60px;
         height: 60px;
     }
-    form label[for] {
-        width: 50px;
-    }
+
     #nomVille{
-        width: 70%;
+        padding: 2%;
     }
 
 /*----filtres----*/
     .filtre {
         margin: 2% 8%;
         font-size: 18px;
+        width: auto;
     }
     .filtre .F{
         margin: 2%;
         font-size: 16px;
-        padding: 0 2%;
+
     }
     .titre_span {
         width: 100%;
         text-align: left;
         margin:2%;
     }
-    .filtre .F .filtre_nom {
-        margin: 0 5%;
-    }
+
     .filtre .F .fas{
         width:50px;
         height: 50px;
