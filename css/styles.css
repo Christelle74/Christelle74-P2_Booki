@@ -122,6 +122,7 @@ form label[for] {
     right: 0;
     top: 0;
     height: 100%;
+    border: none;
 }
 #iconerechercher{
     display: flex;
@@ -536,7 +537,9 @@ span.notationPopulaires {
     form {
         width: 50%;
     } 
-        
+    #iconerechercher{
+        display: none;
+    }    
     .filtre {
         font-size: 18px;
         flex-wrap: nowrap;
@@ -625,6 +628,7 @@ span.notationPopulaires {
     nav li:hover {
         border-bottom-color: #0065FC;
     }
+    
 
 /*----titre----*/
     #titre{
@@ -643,6 +647,7 @@ span.notationPopulaires {
     #iconerechercher{
         width: 60px;
         height: 60px;
+        border:none;
     }
 
     #nomVille{
@@ -711,6 +716,7 @@ span.notationPopulaires {
         width: auto;
         padding: 0;
         margin: 10% 0 0 0;
+        border-radius: 0;
     }
     .titrePopulaires{
         margin: 2%;
