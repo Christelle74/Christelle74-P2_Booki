@@ -1,0 +1,787 @@
+
+body{
+    display:flex;
+    justify-content: center;
+    font-family: 'raleway';
+}
+
+
+/*titres*/
+h1 {font-size: 24px;
+    font-weight: bold;
+    display:flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+h2 {
+    font-size: 24px;
+    margin: 2%;
+    width: auto;
+}
+h3 {
+    font-size: 20px;
+    margin:0;
+}
+p{
+    font-size: 18px;
+    margin: 0;
+}
+
+
+/*--------header : logo + nav----------*/
+header{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 2% 2% 0 2%;
+}
+.logo {
+    padding:0 1%;
+}
+.logo img {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav li {
+    padding: 45px;
+    border-top: 2px solid transparent;    
+}
+nav a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+ nav a:hover {
+    color :#0065FC;
+}
+nav li:hover {
+    border-top-color: #0065FC;
+}
+
+
+
+/*-----header : formulaire------*/
+form  {
+    margin: 2% 0;
+    display: flex;
+    border: 1px solid #F2F2F2;
+    border-radius: 20px;
+    width: 34%;
+    height:60px;
+    position: relative;
+}
+form label[for] {
+    width: 60px;
+    height:60px;
+    background-color:  #F2F2F2;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    position: absolute;
+    left:0;
+}
+.fa-map-marker-alt {
+    padding: 20px;
+}
+.fa-map-marker-alt::before{
+    font-size: 18px;
+}
+#nomVille {
+    width:60%;
+    height: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    border:none;
+    padding-left: 15px;
+    position: absolute;
+    left: 60px;
+    top: 0;
+}
+
+#boutonrechercher {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    width: 35%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+#iconerechercher{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height : 50px;
+    border-radius: 20px;
+    background-color: #0065FC;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+
+/*------header:filtres------*/
+.filtre {
+  width: 100% ;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 20px;
+}
+.filtre .F {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: auto;
+    margin: 1%;
+    border: 2px solid #f2f2f2;
+    border-radius: 50px;
+    padding: 0 1%;
+}
+.filtre .F:hover{
+  cursor: pointer;
+  color: #0065FC
+}
+.filtre .F .filtre_nom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 1%;
+  padding: 0 1%;
+}
+.filtre .F .fas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0065FC;
+  background-color: #DEEBFF;
+  height: 55px;
+  width: 55px;
+  border-radius: 999px;
+  margin: 2% 2% 2% -25%;
+}
+.filtre .F .fas::before{
+  display: flex;
+  justify-content: center;
+}
+span {
+  margin-right:  15px;
+  font-weight: bold;  
+}
+
+
+/*-----header:info------*/
+#info{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin:2% 0;
+}
+.info{
+    font-weight: normal;
+    margin:0 1%;
+    font-size: 18px;
+}
+#info .fas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0065FC;
+    height: 25px;
+    width: 25px;
+    border-radius: 999px;
+    margin: 2px 2px 2px 0;
+    border: 2px solid #f2f2f2;
+    font-size: 12px;
+  }
+#info .fas::before{
+    display: flex;
+    justify-content: center;
+  }
+
+
+
+/*---------------hébergements---------------*/
+
+#Hébergements {
+    display: flex;
+    justify-content: space-around;
+    margin:0 2%;
+}
+#HébergementsMarseille {
+    background-color: #F2F2F2;
+    width: auto;
+    height: auto;
+    margin-right: 2%;
+    padding: 2%;
+    border-radius: 15px;
+}
+#containerMarseille :hover, #containerPopulaires :hover {
+    transform: translateY(-2px) scale(1.02);
+    transition: transform .25s ease;
+    border-radius: 15px;
+}
+#HébergementsMarseille a, #Populaires a{
+    text-decoration: none;
+}
+#containerMarseille {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 2%;
+}
+#containerPopulaires {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 32%;
+    justify-content: space-between;
+}
+#containerMarseille a {
+    flex: 2 1 250px;
+    width:auto;
+    height: auto;
+    text-decoration: none;
+}
+#containerPopulaires a {
+    width:auto;
+    height: auto;
+    text-decoration: none;
+}
+.Carte {
+    width:auto;
+    height: auto;
+    background-color: white;
+    margin : 5%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 15px;
+    border: 5px solid white;
+    transition: all 0.3s ease-out;
+}
+.cartePopulaires {
+    min-width:350px;
+    height: 160px;
+    background-color: white;
+    margin : 5% 2% 0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border: 5px solid white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+}
+.Carte img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.cartePopulaires img {
+    width: 40%;
+    height: 160px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.description{
+    color: black;
+    padding: 2% 5%;
+    width: auto;
+    height: auto;
+}
+.descriptionPopulaires {
+    color: black;
+    width: 60%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 5% 5% 2% 0;
+    position: relative;
+}
+.description p, .descriptionPopulaires p{
+    margin: 2% 0;
+}
+.notation {
+    padding: 2% 5%;
+    display: flex;
+}
+span.notationPopulaires {
+    margin: 40% 0 0 0;
+    display: flex;
+    position: absolute;
+}
+.fa-star {
+    color:#F2F2F2;
+	font-size: 12px;
+}
+.fa-star.blue {
+    color: #0065FC;
+}
+#afficher p{
+    font-size: 20px;
+    margin: 2%;
+}
+#afficher a{
+    text-decoration: none;
+    padding:5px;
+    color: black;
+    font-weight: bold;
+}
+#afficher a :hover {
+    color: #0065FC;
+    transition: none;
+    background-color: transparent;
+}
+.fa-chart-line {
+    font-size: 24px;
+}
+
+/*populaires*/
+#Populaires {
+    background-color: #F2F2F2;
+    width: auto;
+    height: auto;
+    padding: 2%;
+    border-radius: 15px;
+}
+
+.titrePopulaires {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:3% 0 0 0;
+}
+
+
+/*activités*/
+#Activités {
+    margin: 5% 1%;
+    height: auto;
+}
+.containerActivités {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+}
+.containerActivités a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.colonne {
+    width: 22%;
+    height:500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.container1 a :hover, .container2 a :hover, .container3 a :hover, .container4 a :hover, .container5 a :hover, .container6 a :hover{
+    text-decoration: none;
+    color:#0065FC;
+    font-weight: bold;
+}
+.container1, .container4 {
+    width:22%;
+    height:500px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.container2 {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.container3 {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.container5, .container6 {
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.VieuxPort, .calanques  {
+    height: 500px;
+}
+.Pomègues {
+    height:280px;
+}
+.Frioul {
+    height: 190px;
+}
+.NotreDame, .Longchamp {
+    height: 235px;
+}
+.VieuxPort img, .calanques img{
+    width: 100%;
+    height : 440px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    object-fit: cover;
+}
+.Pomègues img {
+    width: 100%;
+    height : 220px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    object-fit: cover;
+}
+
+.Frioul img {
+    width: 100%;
+    height : 130px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    object-fit: cover;
+}
+
+.NotreDame img, .Longchamp img{
+    width: 100%;
+    height : 175px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    object-fit: cover;
+}
+
+.Pomègues h3, .VieuxPort h3, .Frioul h3, .calanques h3, .NotreDame h3, .Longchamp h3 {
+    margin: 5%;
+}
+
+/*footer*/
+#footer {
+    background-color: #F2F2F2;
+    padding: 4% 3%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 150px;
+}
+
+#APropos, #NosHébergements, #Assistance {
+    width:50%;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#footer ul {
+    padding: 2% 0;
+}
+
+#footer li {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+}
+
+#footer a:hover{
+    text-decoration: none;
+    color:#0065FC;
+}
+
+
+/*ecrans pc*/
+@media screen and (min-width: 992px){
+    #iconerechercher{
+        display: none;
+    }
+}
+
+
+/*-----------------ecrans tablettes de 769px à 992px----------------*/
+@media screen and (min-width:768px) and (max-width: 992px){
+    h2 {
+        font-size: 20px;
+    }
+    h3 {
+        font-size: 16px;
+    }
+    
+    form {
+        width: 50%;
+    } 
+        
+    .filtre {
+        font-size: 18px;
+        flex-wrap: nowrap;
+    }
+    .filtre .F {
+        margin: 12px;
+    }
+    .filtre .F .filtre_nom {
+        margin: 0 12px;
+    }
+
+    #containerMarseille{
+        gap: 0;
+    }
+    #containerPopulaires {
+        
+    }
+    .titrePopulaires{
+        padding: 3% 0;
+    }
+    .cartePopulaires{
+        min-width: 240px;
+        height: 220px;
+        flex-direction: column;
+    }
+    .cartePopulaires img{
+        width: 100%;
+        height: 120px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius:0;
+    }
+    .descriptionPopulaires {
+        width: auto;
+        height: auto;
+        margin: 0 5%;
+        padding: 0;
+    }
+    span.notationPopulaires {
+        margin: 33% 0;
+    }
+}
+
+
+/*--------------ecrans mobiles largeur maxi 768px-------------------*/
+@media screen and (max-width: 767px){
+    
+    h1 {
+        margin:2% 8%;
+        font-size: 22px;
+    } 
+    h2{
+        font-size: 22px;
+    } 
+    h3 {
+        font-size: 18px;
+    }
+    p {
+        padding : 0 8%;
+        font-size: 16px;
+    }
+
+
+/*-----logo----*/
+
+    .logo img {
+        height: 40px;
+        margin:10% 
+    }
+
+/*----navigation----*/
+    nav {
+        height: 150px;
+        width: 100%;
+        flex-direction: column;   
+    }  
+    nav li {
+        border-bottom: 2px solid #F2F2F2;
+        border-top: none;
+        padding: 15px 45px;
+    }
+    nav ul {
+        width: 100%;
+        padding:0;
+    }
+    nav a{
+        font-size: 16px;
+    }
+    nav a :hover {
+        color :#0065FC;
+    }
+    nav li:hover {
+        border-bottom-color: #0065FC;
+    }
+
+/*----titre----*/
+    #titre{
+        width: 100%;
+        margin: 5% 0;
+    }
+
+/*----formulaire----*/
+    form  {
+        width:85%;
+        margin:5% 8%;
+    }
+    #boutonrechercher{
+        display: none;
+    }
+    #iconerechercher{
+        width: 65px;
+        height: 60px;
+    }
+    form label[for] {
+        width: 50px;
+    }
+    #nomVille{
+        width: 70%;
+    }
+
+/*----filtres----*/
+    .filtre {
+        margin: 2% 8%;
+        font-size: 18px;
+    }
+    .filtre .F{
+        margin: 2%;
+        font-size: 16px;
+        padding: 0 2%;
+    }
+    .titre_span {
+        width: 100%;
+        text-align: left;
+        margin:2%;
+    }
+    .filtre .F .filtre_nom {
+        margin: 0 5%;
+    }
+    .filtre .F .fas{
+        width:50px;
+        height: 50px;
+        margin: 0 0 0 -10%;
+    }
+
+/*----info----*/
+    #info {
+        margin: auto;
+        width: 90%;
+    }
+    .info {
+        margin:0 2%;
+        font-size: 16px;
+        width: 100%;
+    }
+
+/*----hébergements----*/
+    #Hébergements {
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+    #HébergementsMarseille {
+        background-color:white;
+        width: 100%;
+        padding: 0;
+        margin: 10% 0 0 0;
+    }
+    #HébergementsMarseille h2{
+        margin: 5%;
+    }
+    #containerMarseille {
+        margin:0 2% ;
+    }
+    #afficher p{
+        font-size: 18px;
+        padding:2%;
+    }
+    .description p, .cartePopulaires p {
+        padding:0;
+    }
+    #Populaires {
+        width: auto;
+        padding: 0;
+        margin: 10% 0 0 0;
+    }
+    .titrePopulaires{
+        margin: 2%;
+        padding: 2%;
+    }
+    .fa-chart-line{
+        font-size: 22px;
+    }
+    .Carte{
+        margin:2%;
+    }
+    #containerPopulaires {
+        margin:0 5% ;
+    }
+    .cartePopulaires{
+        min-width: unset;
+        height: 140px;
+    }
+    .cartePopulaires img{
+        width : 130px;
+        height: 140px;
+    }
+    .descriptionPopulaires{
+        padding: 2% 0;
+    }
+    span.notationPopulaires {
+        margin: 60% 0 0 0; 
+    }
+
+/*----Activités----*/
+    .titreActivités{
+        margin: 6% 4%;
+    }
+    .colonne {
+        width: 100%;
+        height:380px;
+        margin: 5%;
+    }
+    .container1,  .container4 {
+        width:100%;
+        height:180px;
+        margin:2% 5%;
+    }
+    .container2, .container3, .container5, .container6 {
+        height:180px;
+    }
+    .VieuxPort img, .calanques img, .Pomègues img, .Frioul img, .NotreDame img, .Longchamp img{
+        height : 120px;
+    }
+
+/*----footer----*/
+    #footer {
+       flex-direction: column;
+       height: auto;
+       padding: 10%;
+    }
+   #APropos, #NosHébergements, #Assistance {
+    width:100%;
+    height: auto;    
+    }
+}
+    
+   
+
+
+
+
+
+
